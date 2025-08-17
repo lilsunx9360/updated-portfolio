@@ -54,9 +54,9 @@ const Project = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: false, amount: 0.3 }}
-    className="relative min-h-[60vh] sm:min-h-screen bg-gradient-to-tr from-black via-black to-neutral-800 text-white mt-10 overflow-hidden px-4 py-6 sm:py-10" id="project">
+    className="relative min-h-[60vh] sm:min-h-screen bg-gradient-to-tr from-black via-black to-neutral-800 text-white  overflow-hidden px-4 py-6 sm:py-10" id="project">
       {/* Top Center "PROJECT" heading */}
-      <div className="w-full text-center mb-6 sm:mb-10">
+      <div className="w-full text-center  ">
         <h1 className="text-[3rem] sm:text-[6rem] md:text-[7rem] lg:text-[8rem] font-bold uppercase opacity-25 leading-none tracking-tight select-none pointer-events-none">
           PROJECT
         </h1>
