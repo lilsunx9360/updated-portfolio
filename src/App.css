@@ -1,0 +1,53 @@
+@import "tailwindcss";
+@import "@fontsource/poppins";
+
+* {
+  box-sizing: border-box;
+  font-family: poppins, sans-serif;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes morph-20 {
+  0%   { border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%; border: 2px solid #ff0000; } /* Sharp square - red */
+  5%   { border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%; border: 2px solid #00ff00; } /* Circle (sharp contrast) - green */
+  10%  { border-radius: 90% 10% 90% 10% / 10% 90% 10% 90%; border: 2px solid #0000ff; } /* Star-like - blue */
+  15%  { border-radius: 20% 80% 20% 80% / 80% 20% 80% 20%; border: 2px solid #ff00ff; } /* Sharp cross - magenta */
+  20%  { border-radius: 100% 0% 100% 0% / 0% 100% 0% 100%; border: 2px solid #00ffff; } /* Jagged cross - cyan */
+  25%  { border-radius: 10% 90% 50% 50% / 50% 50% 90% 10%; border: 2px solid #ffa500; } /* Asymmetric star - orange */
+  30%  { border-radius: 80% 20% 80% 20% / 20% 80% 20% 80%; border: 2px solid #800080; } /* Sharp wave - purple */
+  35%  { border-radius: 30% 70% 30% 70% / 70% 30% 70% 30%; border: 2px solid #008080; } /* Jagged diamond - teal */
+  40%  { border-radius: 0% 100% 0% 100% / 100% 0% 100% 0%; border: 2px solid #ff1493; } /* Extreme zigzag - pink */
+  45%  { border-radius: 50% 50% 0% 0% / 50% 50% 0% 0%; border: 2px solid #32cd32; } /* Triangle-like - lime */
+  50%  { border-radius: 90% 10% 90% 10% / 90% 10% 90% 10%; border: 2px solid #1e90ff; } /* Sharp diamond - dodgerblue */
+  55%  { border-radius: 70% 30% 70% 30% / 30% 70% 30% 70%; border: 2px solid #ff4500; } /* Jagged oval - orangered */
+  60%  { border-radius: 100% 0% 50% 50% / 50% 50% 0% 100%; border: 2px solid #9400d3; } /* Asymmetric jagged - darkviolet */
+  65%  { border-radius: 20% 80% 20% 80% / 80% 20% 80% 20%; border: 2px solid #00ced1; } /* Sharp cross tilt - darkturquoise */
+  70%  { border-radius: 10% 90% 10% 90% / 90% 10% 90% 10%; border: 2px solid #ffd700; } /* Jagged star - gold */
+  75%  { border-radius: 30% 70% 50% 50% / 50% 50% 70% 30%; border: 2px solid #ff69b4; } /* Asymmetric wave - hotpink */
+  80%  { border-radius: 0% 100% 0% 100% / 100% 0% 100% 0%; border: 2px solid #00bfff; } /* Extreme wave - deepskyblue */
+  85%  { border-radius: 60% 40% 60% 40% / 40% 60% 40% 60%; border: 2px solid #dc143c; } /* Jagged diamond - crimson */
+  90%  { border-radius: 90% 10% 50% 50% / 50% 50% 10% 90%; border: 2px solid #adff2f; } /* Jagged blob - greenyellow */
+  95%  { border-radius: 50% 50% 20% 80% / 20% 80% 50% 50%; border: 2px solid #00fa9a; } /* Arrow-like tilt - mediumspringgreen */
+  100% { border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%; border: 2px solid #ff0000; } /* Back to sharp square - red */
+}
+.morphing-20 {
+  animation: morph-20 25s infinite ease-in-out;
+}
+
+/* ABOUT */
+
+.dark-gradient {
+background: linear-gradient(to right, #000000, #090909, #131313, #202020);
+}
+
