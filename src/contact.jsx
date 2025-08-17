@@ -1,12 +1,14 @@
 // src/components/Contact.jsx
 import React from 'react';
 import Footer from './Footer';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   return (
     <>
-      <section 
-      className="relative min-h-screen bg-gradient-to-tr from-black via-black to-neutral-800 text-white overflow-hidden px-4 py-10 flex flex-col md:flex-row gap-6" id="contact">
+      <section
+      
+      className="relative min-h-screen dark-gradient text-white overflow-hidden px-4 py-10 flex flex-col md:flex-row gap-6" id="contact">
         
         {/* Unified Top-Centered CONTACT Heading for All Screens */}
         <div className="absolute top-4 left-1/2 transform -translate-x-1/2 text-center z-10 ">
@@ -19,7 +21,13 @@ const Contact = () => {
         </div>
 
         {/* Left Side - Contact Form */}
-        <div className="flex-1 flex justify-center items-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 80 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: false, amount: 0.3 }}
+      
+        className="flex-1 flex justify-center items-center">
           <form className="w-full max-w-3xl rounded-2xl shadow-lg p-6 space-y-6">
             <div>
               <label className="block text-sm font-medium text-white mb-2">Name</label>
@@ -52,7 +60,7 @@ const Contact = () => {
               Send Message
             </button>
           </form>
-        </div>
+        </motion.div>
       </section>
 
       {/* Footer Section */}

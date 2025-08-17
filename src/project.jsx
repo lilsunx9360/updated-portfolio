@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { FaExternalLinkAlt, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import pro1 from './assets/pro1.png';
+import { motion } from 'framer-motion';
 const projects = [
   {
     id: 1,
@@ -49,7 +50,7 @@ const Project = () => {
 
   return (
     <section 
-    className="relative min-h-[60vh] sm:min-h-screen bg-gradient-to-tr from-black via-black to-neutral-800 text-white  overflow-hidden px-4 py-6 sm:py-10" id="project">
+    className="relative min-h-[60vh] sm:min-h-screen bg-black text-white  overflow-hidden px-4 py-6 sm:py-10" id="project">
       {/* Top Center "PROJECT" heading */}
       <div className="w-full text-center  ">
         <h1
@@ -70,7 +71,12 @@ const Project = () => {
           <FaArrowLeft className="text-lg sm:text-2xl" />
         </button>
 
-        <div className="w-full max-w-6xl mt-5 overflow-x-auto no-scrollbar" ref={scrollRef}>
+        <motion.div 
+         initial={{ opacity: 0, y: 80 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: false, amount: 0.3 }}
+        className="w-full max-w-6xl mt-5 overflow-x-auto no-scrollbar" ref={scrollRef}>
           <div className="flex">
             {projects.map((project, index) => (
               <div
@@ -109,7 +115,7 @@ const Project = () => {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Right Arrow */}
         <button
