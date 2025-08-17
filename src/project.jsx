@@ -1,7 +1,6 @@
 import { useRef } from 'react';
 import { FaExternalLinkAlt, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import pro1 from './assets/pro1.png';
-import { motion } from "framer-motion";
 const projects = [
   {
     id: 1,
@@ -49,15 +48,13 @@ const Project = () => {
   };
 
   return (
-    <motion.section 
-     initial={{ opacity: 0, y: 80 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: false, amount: 0.3 }}
+    <section 
     className="relative min-h-[60vh] sm:min-h-screen bg-gradient-to-tr from-black via-black to-neutral-800 text-white  overflow-hidden px-4 py-6 sm:py-10" id="project">
       {/* Top Center "PROJECT" heading */}
       <div className="w-full text-center  ">
-        <h1 className="text-[3rem] sm:text-[6rem] md:text-[7rem] lg:text-[8rem] font-bold uppercase opacity-25 leading-none tracking-tight select-none pointer-events-none">
+        <h1
+      
+        className="text-[3rem] sm:text-[6rem] md:text-[7rem] lg:text-[8rem] font-bold uppercase opacity-25 leading-none tracking-tight select-none pointer-events-none">
           PROJECT
         </h1>
       </div>
@@ -133,7 +130,7 @@ const Project = () => {
           scrollbar-width: none;
         }
       `}</style>
-    </motion.section>
+    </section>
   );
 };
 
