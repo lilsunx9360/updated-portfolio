@@ -1,15 +1,16 @@
 import { useRef } from 'react';
-import { FaExternalLinkAlt, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-import pro1 from './assets/pro1.png';
+import pro1 from './assets/project-1.png';
 import { motion } from 'framer-motion';
+import { FaExternalLinkAlt } from 'react-icons/fa';
+
 const projects = [
   {
     id: 1,
-    title: 'construction website',
+    title: '',
     image: pro1,
-    live: 'vite-react-sigma-ashen.vercel.app',
+    live: 'https://front-end-c433.vercel.app/',
     description:
-      'I developed a responsive construction website using React.js and Tailwind CSS, showcasing services, projects, contact forms, and modern UI components.',
+      'This project is a web scraping automation tool built with the MERN stack 💻, powered by BullMQ ⚡ for scalable background processing and secured with Firebase Authentication 🔐. Users can upload an Excel sheet of websites 📂, and the system uses headless Puppeteer 🤖 to extract emails 📧, phone numbers 📞, and ZIP codes 📍. All data is stored in MongoDB 🗄️ and displayed on a React dashboard 📊 with export options. 🚀 Especially useful for email marketing and lead generation 🎯, it automates prospecting and boosts outreach efficiency 📈.',
   },
   {
     id: 2,
@@ -37,51 +38,35 @@ const projects = [
 const Project = () => {
   const scrollRef = useRef(null);
 
-  const scroll = (direction) => {
-    const { current } = scrollRef;
-    if (current) {
-      const scrollAmount = 400; // Adjust scroll distance as needed
-      current.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth',
-      });
-    }
-  };
-
   return (
     <section 
-    className="relative min-h-[60vh] sm:min-h-screen bg-black text-white  overflow-hidden px-4 py-6 sm:py-10" id="project">
+      className="relative min-h-[60vh] sm:min-h-screen bg-black text-white overflow-hidden px-4 py-6 sm:py-10" 
+      id="project"
+    >
       {/* Top Center "PROJECT" heading */}
-      <div className="w-full text-center  ">
+      <div className="w-full text-center">
         <h1
-      
-        className="text-[3rem] sm:text-[6rem] md:text-[7rem] lg:text-[8rem] font-bold uppercase opacity-25 leading-none tracking-tight select-none pointer-events-none">
+          className="text-[3rem] sm:text-[6rem] md:text-[7rem] lg:text-[8rem] font-bold uppercase opacity-25 leading-none tracking-tight select-none pointer-events-none"
+        >
           PROJECT
         </h1>
       </div>
 
       {/* Content Slider */}
       <div className="flex justify-center items-center relative">
-        {/* Left Arrow */}
-        <button
-          onClick={() => scroll('left')}
-          className="absolute left-0 z-20 bg-black/50 text-white p-2 sm:p-3 rounded-full hover:bg-black/70 transition-colors"
-          aria-label="Scroll Left"
-        >
-          <FaArrowLeft className="text-lg sm:text-2xl" />
-        </button>
-
         <motion.div 
-         initial={{ opacity: 0, y: 80 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: false, amount: 0.3 }}
-        className="w-full max-w-6xl mt-5 overflow-x-auto no-scrollbar" ref={scrollRef}>
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: false, amount: 0.3 }}
+          className="w-full max-w-6xl mt-5 overflow-x-auto no-scrollbar" 
+          ref={scrollRef}
+        >
           <div className="flex">
             {projects.map((project, index) => (
               <div
                 key={project.id}
-                className="flex-none w-80 sm:w-96 mx-2 rounded-2xl overflow-hidden shadow-lg border-2 border-gray-700 cursor-pointer group relative"
+                className="flex-none w-[350px] h-[500px] mx-2 rounded-2xl overflow-hidden shadow-lg cursor-pointer group relative"
                 onClick={() => window.open(project.live, '_blank', 'noopener,noreferrer')}
               >
                 {/* Project Title at Top Center */}
@@ -96,7 +81,7 @@ const Project = () => {
 
                 {/* Background image */}
                 <div
-                  className="h-60 sm:h-72 bg-cover bg-center"
+                  className="h-full bg-cover bg-center"
                   style={{ backgroundImage: `url(${project.image})` }}
                 ></div>
 
@@ -116,15 +101,6 @@ const Project = () => {
             ))}
           </div>
         </motion.div>
-
-        {/* Right Arrow */}
-        <button
-          onClick={() => scroll('right')}
-          className="absolute right-0 z-20 bg-black/50 text-white p-2 sm:p-3 rounded-full hover:bg-black/70 transition-colors"
-          aria-label="Scroll Right"
-        >
-          <FaArrowRight className="text-lg sm:text-2xl" />
-        </button>
       </div>
 
       <style jsx>{`
