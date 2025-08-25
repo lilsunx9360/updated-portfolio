@@ -1,5 +1,8 @@
 import { useRef } from 'react';
 import pro1 from './assets/project-1.png';
+import pro2 from './assets/pro2.png';
+import pro3 from './assets/pro-3.png';
+import pro4 from './assets/pro-4.png';
 import { motion } from 'framer-motion';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
@@ -10,28 +13,28 @@ const projects = [
     image: pro1,
     live: 'https://front-end-c433.vercel.app/',
     description:
-      'This project is a web scraping automation tool built with the MERN stack 💻, powered by BullMQ ⚡ for scalable background processing and secured with Firebase Authentication 🔐. Users can upload an Excel sheet of websites 📂, and the system uses headless Puppeteer 🤖 to extract emails 📧, phone numbers 📞, and ZIP codes 📍. All data is stored in MongoDB 🗄️ and displayed on a React dashboard 📊 with export options. 🚀 Especially useful for email marketing and lead generation 🎯, it automates prospecting and boosts outreach efficiency 📈.',
+      'This MERN-based web scraping tool automates lead generation with BullMQ for scalable processing and Firebase Authentication for security. Users upload Excel sheets, and Puppeteer extracts emails, phones, and ZIPs. Data is stored in MongoDB and displayed in a React dashboard with export options—streamlining prospecting and outreach.'
   },
   {
     id: 2,
-    title: 'Green Project',
-    image: 'https://via.placeholder.com/300x200/00ff00/ffffff',
-    live: 'https://liveproject2.com',
-    description: 'A green-themed admin dashboard using MERN stack.',
+    title: 'Email-Automation',
+    image: pro2,
+    live: '',
+    description: 'This n8n workflow sends emails using sender accounts listed in Google Sheets. It picks one sender in a round-robin order, then randomly selects a subject and pitch. The workflow sends the email via SMTP using the chosen sender, ensuring balanced distribution and varied personalized outreach.',
   },
   {
     id: 3,
-    title: 'Red Project',
-    image: 'https://via.placeholder.com/300x200/ff0000/ffffff',
-    live: 'https://liveproject1.com',
-    description: 'This is a project about red-themed UI built using React.',
+    title: 'Image Generation',
+    image: pro3,
+    live: '',
+    description: 'I built an n8n workflow that automates AI image generation, uploads the output to the GoHighLevel media library, and then triggers an email notification with the generated image link. This seamless process combines automation, storage, and communication, making image creation and sharing faster, smarter, and fully integrated.',
   },
   {
     id: 4,
-    title: 'Green Project',
-    image: 'https://via.placeholder.com/300x200/00ff00/ffffff',
-    live: 'https://liveproject2.com',
-    description: 'A green-themed admin dashboard using MERN stack.',
+    title: 'Social Media Automation',
+    image: pro4,
+    live: '',
+    description: 'I built an n8n automation that connects Google Sheets, GoHighLevel, and social media. When a post idea is marked “Approve” in the sheet, the workflow triggers and automatically publishes the content through GHL social media accounts. This saves time by turning approvals into instant, scheduled social posts.',
   },
 ];
 
@@ -66,7 +69,7 @@ const Project = () => {
             {projects.map((project, index) => (
               <div
                 key={project.id}
-                className="flex-none w-[350px] h-[500px] mx-2 rounded-2xl overflow-hidden shadow-lg cursor-pointer group relative"
+                className="flex-none w-[300px] h-[450px]  md:w-[350px] md:h-[500] mx-2 rounded-2xl overflow-hidden shadow-lg cursor-pointer group relative"
                 onClick={() => window.open(project.live, '_blank', 'noopener,noreferrer')}
               >
                 {/* Project Title at Top Center */}
@@ -81,7 +84,7 @@ const Project = () => {
 
                 {/* Background image */}
                 <div
-                  className="h-full bg-cover bg-center"
+                  className="h-full bg-contain bg-center bg-no-repeat"
                   style={{ backgroundImage: `url(${project.image})` }}
                 ></div>
 

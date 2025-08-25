@@ -115,7 +115,7 @@ const ShanmugamBackground = () => {
         >
           <section>
             <div className="relative z-10">
-              <Cube backgroundColor="transparent" />
+              <Cube backgroundColor="rgba(0, 0, 0, 0.5)" />
             </div>
           </section>
         </div>
