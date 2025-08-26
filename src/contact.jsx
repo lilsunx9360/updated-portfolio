@@ -8,10 +8,10 @@ const Contact = () => {
     <>
       <section
       
-      className="relative min-h-screen dark-gradient text-white overflow-hidden px-4 py-10 flex flex-col md:flex-row gap-6" id="contact">
+      className="relative min-h-screen bg-neutral-950 text-white overflow-hidden px-4 py-10 flex flex-col md:flex-row gap-6" id="contact">
         
         {/* Unified Top-Centered CONTACT Heading for All Screens */}
-        <div className="absolute top-4 left-1/2 transform -translate-x-1/2 text-center z-10 ">
+        <div className="absolute  top-4 left-1/2 transform -translate-x-1/2 text-center z-10 ">
           <h1
             className="text-[3rem] sm:text-[4rem] md:text-[6rem] lg:text-[7rem] font-bold uppercase opacity-25 select-none pointer-events-none"
             style={{ fontFamily: "'Inter', sans-serif" }}

@@ -15,7 +15,7 @@ const Home = () => {
    {/* Fullscreen Parallax Background */}
 {/* Responsive Parallax Background */}
 <div
-  className="hidden lg:block w-full h-screen bg-center bg-cover"
+  className="hidden  lg:block w-full h-screen bg-center bg-cover"
   style={{
     backgroundImage: `url(${img})`,
     backgroundPosition: "center",

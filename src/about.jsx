@@ -96,7 +96,7 @@ const skills = [
 
 const ShanmugamBackground = () => {
   return (
-    <div className="relative min-h-screen dark-gradient text-white overflow-hidden" id="about">
+    <div className="relative min-h-screen bg-neutral-950 text-white overflow-hidden" id="about">
       <div className="relative z-10 max-w-6xl mx-auto mt-10 md:mt-15">
         <h1
           className="text-[4rem] sm:text-[6rem] md:text-[7rem] lg:text-[8rem] font-bold uppercase opacity-25 select-none pointer-events-none text-center"
@@ -105,7 +105,7 @@ const ShanmugamBackground = () => {
           Skills
         </h1>
         <div
-          className="relative flex justify-center items-center py-20 bg-cover bg-center bg-no-repeat"
+          className="relative flex justify-center  items-center py-20 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: `url(${n8n})`,
             backgroundSize: "cover",

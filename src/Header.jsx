@@ -17,8 +17,13 @@ function App() {
           {/* Left Logo */}
           <div className="flex items-center ">
          <a href="/" className="flex items-center cursor-pointer hover:opacity-90">
+           <img 
+    src={logo} 
+    alt="Logo" 
+    className="w-13 h-13 rounded-full object-cover md:ml-10  " 
+  />
   <h1 
-    className="text-xl font-bold ml-3 text-transparent bg-clip-text"
+    className="text-2xl font-bold ml-3 text-transparent bg-clip-text"
     style={{ backgroundImage: "linear-gradient(to right, #00FFFB, #C800FF)" }}
   >
     San
